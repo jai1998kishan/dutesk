@@ -1,7 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
 
 const VoucherForm = ({ editData }) => {
   const [voucherType, setVoucherType] = useState("Payment");
+  const navigate = useNavigate();
 
   const [form, setForm] = useState(
     editData || {
@@ -99,11 +102,13 @@ const VoucherForm = ({ editData }) => {
 
     localStorage.setItem("vouchers", JSON.stringify(stored));
 
-    alert(editData ? "Updated Successfully" : "Saved Successfully");
+    toast.success("Data is deleted successfully");
+    navigate("/dashboard");
   };
 
   return (
     <div className="p-4">
+      <ToastContainer />
       <h2 className="text-xl font-bold mb-4">Voucher Entry</h2>
 
       <div className="flex gap-2 mb-4">
