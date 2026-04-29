@@ -139,16 +139,17 @@ const VoucherIndex = () => {
       <div className="bg-purple-200 p-4 rounded mb-4 grid grid-cols-4 gap-3">
         <input
           type="date"
-          className="p-2"
+          className="p-2 border border-gray-300 rounded"
           onChange={(e) => setFilters({ ...filters, fromDate: e.target.value })}
         />
         <input
           type="date"
-          className="p-2"
+          className="p-2 border border-gray-300 rounded"
           onChange={(e) => setFilters({ ...filters, toDate: e.target.value })}
         />
+
         <select
-          className="p-2"
+          className="p-2 border border-gray-300 rounded"
           onChange={(e) => setFilters({ ...filters, type: e.target.value })}
         >
           <option value="ALL">Voucher Type</option>
@@ -157,7 +158,7 @@ const VoucherIndex = () => {
         </select>
 
         <select
-          className="p-2"
+          className="p-2 border border-gray-300 rounded"
           onChange={(e) => setFilters({ ...filters, mode: e.target.value })}
         >
           <option value="ALL">Mode</option>
@@ -166,7 +167,7 @@ const VoucherIndex = () => {
         </select>
 
         <select
-          className="p-2"
+          className="p-2 border border-gray-300 rounded"
           onChange={(e) =>
             setFilters({ ...filters, accountHead: e.target.value })
           }
@@ -178,7 +179,7 @@ const VoucherIndex = () => {
 
         <input
           placeholder="From Voc No"
-          className="p-2"
+          className="p-2 border border-gray-300 rounded"
           onChange={(e) =>
             setFilters({ ...filters, fromVocNo: e.target.value })
           }
@@ -186,13 +187,13 @@ const VoucherIndex = () => {
 
         <input
           placeholder="To Voc No"
-          className="p-2"
+          className="p-2 border border-gray-300 rounded"
           onChange={(e) => setFilters({ ...filters, toVocNo: e.target.value })}
         />
 
         <input
           placeholder="Search Narration"
-          className="p-2"
+          className="p-2 border border-gray-300 rounded"
           onChange={(e) =>
             setFilters({ ...filters, narration: e.target.value })
           }
@@ -200,7 +201,7 @@ const VoucherIndex = () => {
 
         <button
           onClick={handleSearch}
-          className="bg-red-500 text-white px-4 py-2 col-span-4"
+          className="bg-red-500 text-white px-4 py-2 col-span-4 rounded"
         >
           Search
         </button>
